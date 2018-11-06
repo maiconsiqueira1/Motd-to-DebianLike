@@ -72,8 +72,6 @@ printf "RAM used:\t%s\tSwap used:\t%s\n" "$memory_usage" "$swap_usage"
 printf "Usage on /:\t%s\tUsage on /home:\t%s\n" "$root_usage" "$home_usage"
 printf "Local Users:\t%s\tProcesses:\t%s\n" "$users" "$processes"
 printf "\n"
-echo
-printf "Your SSH key to remote access is /RSAKeys/$HOSTNAME/$USER/$USER@$HOSTNAME.pem" 
 printf "\n"
 echo
 EOF
