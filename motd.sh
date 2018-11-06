@@ -24,6 +24,7 @@ mv -f /etc/motd{,.ORIG}
 ln -s /var/run/motd /etc/motd
 
 # Create dynamic motd environment
+rm -rf /etc/update-motd.d/
 mkdir /etc/update-motd.d/
 cd /etc/update-motd.d/
 
@@ -40,7 +41,7 @@ if [ -z "$OS" ] && [ -x /usr/bin/lsb_release ]; then
 fi
 printf "\n"
 printf "\n"
-echo "\e[1m Welcome to OPTEC Cloud Infrastructure \e[0m"
+echo -e "\e[1m Welcome to OPTEC Cloud Infrastructure \e[0m"
 printf "\n"
 printf "\n"
 hostnamectl
