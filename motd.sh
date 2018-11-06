@@ -67,7 +67,6 @@ time=`uptime | grep -ohe 'up .*' | sed 's/,/\ hours/g' | awk '{ printf $2" "$3 }
 processes=`ps aux | wc -l`
 ip=`ifconfig $(route -n | grep '^0.0.0.0' | awk '{ print $8 }') | grep "inet addr" | awk -F: '{print $2}' | awk '{print $1}'`
 printf "System information as of %s\n\n" "$date"
-printf "IP Address:\t%s\tSystem uptime:\t%s\n" "$ip" "$time"
 printf "System load:\t%s\tProcesses:\t%s\n" "$load" "$processes"
 printf "RAM used:\t%s\tSwap used:\t%s\n" "$memory_usage" "$swap_usage"
 printf "Usage on /:\t%s\tUsage on /home:\t%s\n" "$root_usage" "$home_usage"
@@ -78,16 +77,6 @@ printf "Your SSH key to remote access is /RSAKeys/$HOSTNAME/$USER/$USER@$HOSTNAM
 printf "\n"
 echo
 EOF
-
-
-cat <<'EOF' > 90-footer
-#!/bin/sh
-#
-#    90-footer - write the admin's footer to the MOTD
-#
-[ -f /etc/motd.tail ] && cat /etc/motd.tail || true
-EOF
-
 
 chmod +x /etc/update-motd.d/*
 
