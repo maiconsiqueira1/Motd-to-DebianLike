@@ -13,7 +13,7 @@ Historical:
 v1.0: 2018.11.06, Maicon Siqueira 
   Your MOTD banner will run like below:
 
-- Welcome to Company Cloud Infrastructure 
+      Welcome to Company Cloud Infrastructure 
 
       Static hostname: TSM-01
       Icon name: computer-laptop
