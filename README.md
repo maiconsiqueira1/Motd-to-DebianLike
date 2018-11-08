@@ -1,5 +1,4 @@
-# Banner to login to Debian Like
-Banner to SSH login
+# Banner: Login to O.S Debian Like
 
 Make the script executable: chmod +x /etc/motd.sh
 And Run the executable to update de motd
