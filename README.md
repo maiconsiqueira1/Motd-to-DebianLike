@@ -1,4 +1,4 @@
-bannertossh to Debian Like
+# bannertossh to Debian Like
 Banner to SSH login
 
 Make the script executable: chmod +x /etc/motd.sh
